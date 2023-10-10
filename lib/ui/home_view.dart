@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: unnecessary_null_comparison
+
 import 'package:flutter/material.dart';
 import 'package:object_detection/tflite/recognition.dart';
 import 'package:object_detection/tflite/stats.dart';
@@ -15,10 +16,10 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   /// Results to draw bounding boxes
-  List<Recognition> results;
+  List<Recognition> results = [];
 
   /// Realtime stats
-  Stats stats;
+  Stats stats = Stats();
 
   /// Scaffold Key
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
